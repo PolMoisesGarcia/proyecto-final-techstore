@@ -293,6 +293,19 @@ a {
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
+.mensaje-formulario {
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.mensaje-formulario.error {
+    color: #dc2626;
+}
+
+.mensaje-formulario.exito {
+    color: #16a34a;
+}
+
 .campo {
     margin-bottom: 1.2rem;
 }
@@ -312,6 +325,12 @@ a {
     border-radius: 8px;
     font-family: inherit;
     font-size: 1rem;
+}
+
+.campo textarea {
+    resize: vertical;
+    min-height: 130px;
+    max-height: 260px;
 }
 
 .campo input:focus,

@@ -202,3 +202,60 @@ botonVaciarCarrito.addEventListener("click", vaciarCarrito);
 
 obtenerProductos();
 renderizarCarrito();
+
+const formularioContacto = document.getElementById("formulario-contacto");
+const mensajeFormulario = document.getElementById("mensaje-formulario");
+
+function validarEmail(email) {
+    const expresionEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return expresionEmail.test(email);
+}
+
+function validarFormularioContacto(event) {
+    const nombre = formularioContacto.nombre.value.trim();
+    const email = formularioContacto.email.value.trim();
+    const mensaje = formularioContacto.mensaje.value.trim();
+
+    mensajeFormulario.textContent = "";
+    mensajeFormulario.className = "mensaje-formulario";
+
+    if (nombre === "") {
+        event.preventDefault();
+        mensajeFormulario.textContent = "Por favor, ingresá tu nombre.";
+        mensajeFormulario.classList.add("error");
+        return;
+    }
+
+    if (email === "") {
+        event.preventDefault();
+        mensajeFormulario.textContent = "Por favor, ingresá tu correo electrónico.";
+        mensajeFormulario.classList.add("error");
+        return;
+    }
+
+    if (!validarEmail(email)) {
+        event.preventDefault();
+        mensajeFormulario.textContent = "Por favor, ingresá un correo electrónico válido.";
+        mensajeFormulario.classList.add("error");
+        return;
+    }
+
+    if (mensaje === "") {
+        event.preventDefault();
+        mensajeFormulario.textContent = "Por favor, escribí un mensaje.";
+        mensajeFormulario.classList.add("error");
+        return;
+    }
+
+    if (mensaje.length < 10) {
+        event.preventDefault();
+        mensajeFormulario.textContent = "El mensaje debe tener al menos 10 caracteres.";
+        mensajeFormulario.classList.add("error");
+        return;
+    }
+
+    mensajeFormulario.textContent = "Formulario válido. Enviando mensaje...";
+    mensajeFormulario.classList.add("exito");
+}
+
+formularioContacto.addEventListener("submit", validarFormularioContacto);

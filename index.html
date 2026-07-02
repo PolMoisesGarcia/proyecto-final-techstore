@@ -120,7 +120,7 @@
             <div class="contenedor">
                 <h2 class="titulo-seccion">Contacto</h2>
 
-                <form class="formulario" action="https://formspree.io/f/xjgleeqj" method="POST">
+                <form id="formulario-contacto" class="formulario" action="https://formspree.io/f/xjgleeqj" method="POST" novalidate>
                     <div class="campo">
                         <label for="nombre">Nombre</label>
                         <input type="text" id="nombre" name="nombre" placeholder="Ingresá tu nombre">
@@ -136,6 +136,7 @@
                         <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribí tu mensaje"></textarea>
                     </div>
 
+                    <p id="mensaje-formulario" class="mensaje-formulario"></p>
                     <button type="submit" class="boton">Enviar mensaje</button>
                 </form>
             </div>
