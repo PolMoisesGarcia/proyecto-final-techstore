@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore | Tecnología para todos</title>
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS EXTERNO -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header id="inicio" class="header">
+        <div class="contenedor header-contenido">
+            <h1 class="logo">TechStore</h1>
+
+            <nav class="nav">
+                <ul class="nav-lista">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#resenas">Reseñas</a></li>
+                    <li><a href="#multimedia">Multimedia</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="contenedor hero-contenido">
+                <div class="hero-texto">
+                    <h2>Tecnología simple, útil y al alcance de todos</h2>
+                    <p>
+                        En TechStore encontrás productos tecnológicos pensados para estudiar,
+                        trabajar y disfrutar todos los días.
+                    </p>
+                    <a href="#productos" class="boton">Ver productos</a>
+                </div>
+
+                <div class="hero-imagen">
+                    <img src="assets/img/banner.jpg" alt="Escritorio con productos tecnológicos">
+                </div>
+            </div>
+        </section>
+
+        <section id="productos" class="productos">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Productos destacados</h2>
+
+                <div class="productos-contenedor">
+                    <article class="producto-card">
+                        <img src="assets/img/auriculares.jpg" alt="Auriculares inalámbricos negros">
+                        <h3>Auriculares para estudio</h3>
+                        <p>Ideales para estudiar, escuchar música o participar en reuniones virtuales.</p>
+                        <span class="precio">$45.000</span>
+                    </article>
+
+                    <article class="producto-card">
+                        <img src="assets/img/teclado.jpg" alt="Teclado mecánico con luces">
+                        <h3>Teclado mecánico</h3>
+                        <p>Diseñado para escribir con comodidad y mejorar la experiencia frente a la computadora.</p>
+                        <span class="precio">$60.000</span>
+                    </article>
+
+                    <article class="producto-card">
+                        <img src="assets/img/mouse.jpg" alt="Mouse ergonómico para computadora">
+                        <h3>Mouse ergonómico</h3>
+                        <p>Un accesorio cómodo y preciso para trabajar, estudiar o jugar.</p>
+                        <span class="precio">$28.000</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="resenas" class="resenas">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Reseñas de clientes</h2>
+
+                <div class="resenas-contenedor">
+                    <article class="resena-card">
+                        <h3>María López</h3>
+                        <p>“Compré los auriculares y me resultaron muy cómodos para estudiar desde casa.”</p>
+                    </article>
+
+                    <article class="resena-card">
+                        <h3>Juan Pérez</h3>
+                        <p>“El teclado tiene muy buena respuesta y el diseño queda excelente en mi escritorio.”</p>
+                    </article>
+
+                    <article class="resena-card">
+                        <h3>Camila Torres</h3>
+                        <p>“La atención fue clara y el producto llegó en buen estado. Recomiendo la tienda.”</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="multimedia" class="multimedia">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Conocé más sobre tecnología</h2>
+
+                <div class="video-contenedor">
+                    <iframe 
+                        src="https://www.youtube.com/embed/LPnOR9Uhjdw"
+                        title="Video sobre tecnología"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="contacto">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Contacto</h2>
+
+                <form class="formulario" action="https://formspree.io/f/xjgleeqj" method="POST">
+                    <div class="campo">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ingresá tu nombre">
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="Ingresá tu email">
+                    </div>
+
+                    <div class="campo">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribí tu mensaje"></textarea>
+                    </div>
+
+                    <button type="submit" class="boton">Enviar mensaje</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="contenedor">
+            <p>TechStore - Proyecto Front-End JS | Talento Tech - 2026</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

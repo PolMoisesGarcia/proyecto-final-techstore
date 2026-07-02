@@ -1,0 +1,366 @@
+/* ============================= */
+/* RESET / INICIALIZACIÓN */
+/* ============================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ============================= */
+/* ESTILOS GENERALES */
+/* ============================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #f4f7fb;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.titulo-seccion {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #111827;
+}
+
+.boton {
+    display: inline-block;
+    background-color: #2563eb;
+    color: #ffffff;
+    padding: 0.8rem 1.4rem;
+    border-radius: 8px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.boton:hover {
+    background-color: #1d4ed8;
+}
+
+/* ============================= */
+/* HEADER Y NAVEGACIÓN */
+/* ============================= */
+
+.header {
+    background-color: #111827;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.nav-lista {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-lista a {
+    color: #ffffff;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-lista a:hover {
+    color: #60a5fa;
+}
+
+/* ============================= */
+/* HERO / INICIO */
+/* ============================= */
+
+.hero {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #dbeafe, #eff6ff);
+}
+
+.hero-contenido {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.hero-texto {
+    flex: 1;
+}
+
+.hero-texto h2 {
+    font-size: 2.6rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: #111827;
+}
+
+.hero-texto p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.hero-imagen {
+    flex: 1;
+}
+
+.hero-imagen img {
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ============================= */
+/* PRODUCTOS CON FLEXBOX */
+/* ============================= */
+
+.productos {
+    padding: 4rem 0;
+    background-color: #ffffff;
+}
+
+.productos-contenedor {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.producto-card {
+    background-color: #f9fafb;
+    width: 320px;
+    padding: 1.2rem;
+    border-radius: 14px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.producto-card img {
+    height: 210px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+.producto-card h3 {
+    margin-bottom: 0.7rem;
+    color: #111827;
+}
+
+.producto-card p {
+    margin-bottom: 1rem;
+    color: #4b5563;
+}
+
+.precio {
+    display: inline-block;
+    color: #2563eb;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+/* ============================= */
+/* RESEÑAS CON GRID */
+/* ============================= */
+
+.resenas {
+    padding: 4rem 0;
+    background-color: #eef2ff;
+}
+
+.resenas-contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.resena-card {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 14px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.resena-card h3 {
+    margin-bottom: 0.8rem;
+    color: #111827;
+}
+
+.resena-card p {
+    color: #4b5563;
+}
+
+/* ============================= */
+/* MULTIMEDIA */
+/* ============================= */
+
+.multimedia {
+    padding: 4rem 0;
+    background-color: #ffffff;
+}
+
+.video-contenedor {
+    max-width: 850px;
+    margin: 0 auto;
+    aspect-ratio: 16 / 9;
+}
+
+.video-contenedor iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 14px;
+}
+
+/* ============================= */
+/* CONTACTO */
+/* ============================= */
+
+.contacto {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #eff6ff, #dbeafe);
+}
+
+.formulario {
+    max-width: 650px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 14px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.campo {
+    margin-bottom: 1.2rem;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    color: #111827;
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+
+.footer {
+    background-color: #111827;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+/* ============================= */
+/* RESPONSIVE - TABLET */
+/* ============================= */
+
+@media (max-width: 768px) {
+    .header-contenido {
+        flex-direction: column;
+    }
+
+    .nav-lista {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .hero-contenido {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-texto h2 {
+        font-size: 2rem;
+    }
+
+    .resenas-contenedor {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================= */
+/* RESPONSIVE - CELULAR */
+/* ============================= */
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .nav-lista {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero {
+        padding: 3rem 0;
+    }
+
+    .hero-texto h2 {
+        font-size: 1.7rem;
+    }
+
+    .titulo-seccion {
+        font-size: 1.6rem;
+    }
+
+    .producto-card {
+        width: 100%;
+    }
+
+    .formulario {
+        padding: 1.4rem;
+    }
+}
