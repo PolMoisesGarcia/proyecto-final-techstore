@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechStore | Tecnología para todos</title>
 
+    <meta name="description" content="TechStore es un e-commerce de productos tecnológicos desarrollado como proyecto final de Front-End JS para Talento Tech.">
+    <meta name="keywords" content="e-commerce, tecnología, productos, carrito de compras, JavaScript, API REST, Front-End">
+    <meta name="author" content="Pol Moisés">
+
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -17,7 +21,7 @@
         <div class="contenedor header-contenido">
             <h1 class="logo">TechStore</h1>
 
-            <nav class="nav">
+            <nav class="nav" aria-label="Navegación principal">
                 <ul class="nav-lista">
                     <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#productos">Productos</a></li>
@@ -137,7 +141,9 @@
                     </div>
 
                     <p id="mensaje-formulario" class="mensaje-formulario"></p>
-                    <button type="submit" class="boton">Enviar mensaje</button>
+                    <button type="submit" class="boton" aria-label="Enviar formulario de contacto">
+                        Enviar mensaje
+                    </button>
                 </form>
             </div>
         </section>
