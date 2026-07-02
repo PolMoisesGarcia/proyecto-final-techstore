@@ -21,6 +21,7 @@
                 <ul class="nav-lista">
                     <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#productos">Productos</a></li>
+                    <li><a href="#carrito">Carrito (<span id="contador-carrito">0</span>)</a></li>
                     <li><a href="#resenas">Reseñas</a></li>
                     <li><a href="#multimedia">Multimedia</a></li>
                     <li><a href="#contacto">Contacto</a></li>
@@ -51,27 +52,29 @@
             <div class="contenedor">
                 <h2 class="titulo-seccion">Productos destacados</h2>
 
-                <div class="productos-contenedor">
-                    <article class="producto-card">
-                        <img src="assets/img/auriculares.jpg" alt="Auriculares inalámbricos negros">
-                        <h3>Auriculares para estudio</h3>
-                        <p>Ideales para estudiar, escuchar música o participar en reuniones virtuales.</p>
-                        <span class="precio">$45.000</span>
-                    </article>
+                <p id="mensaje-productos" class="mensaje-productos">
+                    Cargando productos...
+                </p>
 
-                    <article class="producto-card">
-                        <img src="assets/img/teclado.jpg" alt="Teclado mecánico con luces">
-                        <h3>Teclado mecánico</h3>
-                        <p>Diseñado para escribir con comodidad y mejorar la experiencia frente a la computadora.</p>
-                        <span class="precio">$60.000</span>
-                    </article>
+                <div id="productos-contenedor" class="productos-contenedor">
+                    <!-- Los productos se van a cargar dinámicamente con JavaScript -->
+                </div>
+            </div>
+        </section>
 
-                    <article class="producto-card">
-                        <img src="assets/img/mouse.jpg" alt="Mouse ergonómico para computadora">
-                        <h3>Mouse ergonómico</h3>
-                        <p>Un accesorio cómodo y preciso para trabajar, estudiar o jugar.</p>
-                        <span class="precio">$28.000</span>
-                    </article>
+        <section id="carrito" class="carrito">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Carrito de compras</h2>
+
+                <div id="carrito-contenedor" class="carrito-contenedor">
+                    <p class="carrito-vacio">El carrito está vacío.</p>
+                </div>
+
+                <div class="carrito-resumen">
+                    <p>Total: <span id="total-carrito">$0</span></p>
+                    <button id="vaciar-carrito" class="boton" type="button">
+                        Vaciar carrito
+                    </button>
                 </div>
             </div>
         </section>
