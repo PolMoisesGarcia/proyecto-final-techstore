@@ -7,9 +7,10 @@ const contadorCarrito = document.getElementById("contador-carrito");
 const botonVaciarCarrito = document.getElementById("vaciar-carrito");
 
 const API_PRODUCTOS = "https://fakestoreapi.com/products/category/electronics";
+const CLAVE_CARRITO = "carritoTechStore";
 
 let productosDisponibles = [];
-let carrito = [];
+let carrito = cargarCarritoDesdeLocalStorage();
 
 async function obtenerProductos() {
     try {
@@ -74,7 +75,7 @@ function agregarAlCarrito(idProducto) {
         });
     }
 
-    renderizarCarrito();
+    actualizarCarrito();
 }
 
 function renderizarCarrito() {
@@ -127,7 +128,7 @@ function actualizarResumenCarrito() {
 
 function eliminarProducto(idProducto) {
     carrito = carrito.filter((producto) => producto.id !== idProducto);
-    renderizarCarrito();
+    actualizarCarrito();
 }
 
 function cambiarCantidad(idProducto, accion) {
@@ -150,11 +151,30 @@ function cambiarCantidad(idProducto, accion) {
         }
     }
 
-    renderizarCarrito();
+    actualizarCarrito();
 }
 
 function vaciarCarrito() {
     carrito = [];
+    actualizarCarrito();
+}
+
+function guardarCarritoEnLocalStorage() {
+    localStorage.setItem(CLAVE_CARRITO, JSON.stringify(carrito));
+}
+
+function cargarCarritoDesdeLocalStorage() {
+    const carritoGuardado = localStorage.getItem(CLAVE_CARRITO);
+
+    if (carritoGuardado) {
+        return JSON.parse(carritoGuardado);
+    }
+
+    return [];
+}
+
+function actualizarCarrito() {
+    guardarCarritoEnLocalStorage();
     renderizarCarrito();
 }
 
