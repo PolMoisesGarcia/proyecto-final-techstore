@@ -9,6 +9,33 @@ const botonVaciarCarrito = document.getElementById("vaciar-carrito");
 const API_PRODUCTOS = "https://fakestoreapi.com/products/category/electronics";
 const CLAVE_CARRITO = "carritoTechStore";
 
+const traduccionesProductos = {
+    9: {
+        title: "Disco externo WD 2TB USB 3.0",
+        description: "Disco portátil ideal para guardar archivos, trabajos, fotos y copias de seguridad. Compatible con USB 3.0 y USB 2.0."
+    },
+    10: {
+        title: "Disco sólido SanDisk SSD 1TB",
+        description: "Unidad SSD interna para mejorar la velocidad de arranque, carga de programas y rendimiento general de una computadora."
+    },
+    11: {
+        title: "Disco sólido Silicon Power SSD 256GB",
+        description: "Unidad SSD compacta y rápida, recomendada para mejorar el almacenamiento y la velocidad de respuesta del equipo."
+    },
+    12: {
+        title: "Disco externo WD 4TB para gaming",
+        description: "Disco portátil de alta capacidad, ideal para guardar juegos, archivos pesados y ampliar el almacenamiento de una consola o PC."
+    },
+    13: {
+        title: "Monitor Acer 21.5 pulgadas Full HD",
+        description: "Monitor Full HD de 21.5 pulgadas, adecuado para estudiar, trabajar, navegar por internet y realizar tareas diarias."
+    },
+    14: {
+        title: "Monitor curvo Samsung 49 pulgadas",
+        description: "Monitor curvo ultrawide pensado para gaming, multitarea y experiencias visuales amplias con mayor nivel de inmersión."
+    }
+};
+
 let productosDisponibles = [];
 let carrito = cargarCarritoDesdeLocalStorage();
 
@@ -35,13 +62,15 @@ function renderizarProductos(productos) {
     productosContenedor.innerHTML = "";
 
     productos.forEach((producto) => {
+        const productoTraducido = traduccionesProductos[producto.id] || producto;
+
         const card = document.createElement("article");
         card.classList.add("producto-card");
 
         card.innerHTML = `
-            <img src="${producto.image}" alt="${producto.title}">
-            <h3>${producto.title}</h3>
-            <p>${producto.description}</p>
+            <img src="${producto.image}" alt="${productoTraducido.title}">
+            <h3>${productoTraducido.title}</h3>
+            <p>${productoTraducido.description}</p>
             <span class="precio">$${producto.price}</span>
             <button class="boton agregar-carrito" type="button" data-id="${producto.id}">
                 Agregar al carrito
