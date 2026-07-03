@@ -152,12 +152,12 @@ Proyecto en desarrollo para entrega final del curso Front-End JS de Talento Tech
 
 ## Autor
 
-Proyecto realizado por Pol Moisés.
+Proyecto realizado por Pol Moisés, García Nuñez.
 
 ## Link del repositorio
 
-Pendiente de publicación en GitHub.
+https://github.com/PolMoisesGarcia/proyecto-final-techstore
 
 ## Link del sitio publicado
 
-Pendiente de publicación en GitHub Pages.
+https://polmoisesgarcia.github.io/proyecto-final-techstore/
